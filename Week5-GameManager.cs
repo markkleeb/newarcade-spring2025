@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
-    public float counter = 60;
 
     //Grab the ship object
     public GameObject ship;
@@ -55,15 +54,14 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float diff = counter - Time.time;
-        scoreText.text = "Time: " + diff;
+       
 
     }
 
     public void AddScore()
     {
         score += 1;
-        //scoreText.text = "Score: " + score;
+        scoreText.text = "Score: " + score;
 
         if(score > highScore)
         {
